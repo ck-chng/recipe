@@ -1,12 +1,19 @@
 import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
+import Home from "./Home";
+import Cuisine from "./Cuisine";
+import Searched from "./Searched"
+import Recipe from "./Recipe";
+import {Route, Routes} from 'react-router-dom';
 
 function Pages() {
     return (
-        <div>
-            <Veggie />
-            <Popular />
-        </div>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cuisine/:type" element={<Cuisine />} />
+            <Route path="/searched/:search" element={<Searched />} />
+            <Route path="/recipe/:name" element={<Recipe />}/>
+        </Routes>
     )
 }
 
