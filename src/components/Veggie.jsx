@@ -12,6 +12,7 @@ function Veggie() {
 
     useEffect(() => {
         getVeggie();
+        console.log(process.env.REACT_APP_API_KEY);
     }, []);
 
     const getVeggie = async () => {
