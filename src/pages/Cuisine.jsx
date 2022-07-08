@@ -32,6 +32,7 @@ function Cuisine() {
                         <Link to={'/recipe/' + item.id}>
                             <img src={item.image} alt="" />
                             <h4>{item.title}</h4>
+                            <h4>{process.env.REACT_APP_API_KEY}</h4>
                         </Link>
                     </Card>
                 );
